@@ -36,6 +36,64 @@ body::before {
   padding: 1rem 3rem;
   margin: 3.125rem auto 0 auto;
 }
+label {
+  cursor: pointer;
+}
+
+.check-cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.check-cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.check-cont:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.check-cont input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check-cont input:checked ~ .checkmark:after {
+  display: block;
+}
+.check-cont .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -71,9 +129,33 @@ form {
 }
 label {
   color: #eee;
-  font-size: 1.125rem;
+  font-size: 1.345rem;
   margin-bottom: 0.5rem;
+  font-family: "Be Vietnam", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
 }
+/* #checks {
+  display: flex;
+  flex-wrap: wrap;
+} */
 #op {
   font-size: 1rem;
+  margin-left: 1rem;
 }
+p.dropdown {
+  text-align: left;
+  font-size: 1.575rem;
+}
+.submit-button {
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+
+  border: none;
+  background-color: rgb(0, 236, 138);
+}
+/* input:invalid {
+  border: 1px solid red;
+} */

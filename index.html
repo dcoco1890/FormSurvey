@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Survey Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Be+Vietnam:100&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam:100&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <h1 id="title">Fill out this form for a chance to win nothing</h1>
-        <p id="description">Everyone deserves a little nothing</p>
-      </header>
+</head>
 
-      <form id="survey-form">
-        <div class="form-group">
-          <label for="name" id="name-label">Name: </label
-          ><input
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email" id="email-label">Email: </label
-          ><input
-            type="email"
-            name="email"
-            id="email"
-            class="form-control"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="number" id="number-label"
-            >Age <span id="op">(optional)</span></label
-          >
-          <input
-            type="number"
-            name="age"
-            id="number"
-            min="10"
-            max="99"
-            class="form-control"
-            placeholder="Age"
-          />
-        </div>
-      </form>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Fill out this form for a chance to win nothing</h1>
+            <p id="description">Everyone deserves a little nothing</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name: </label><input type="text" name="name" id="name"
+                    class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email: </label><input type="email" name="email" id="email"
+                    class="form-control" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Age <span id="op">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <p class="dropdown">Do you really think you're cool?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Pick one buddy</option>
+                    <option value="justyes">Yes</option>
+                    <option value="YOC">Yes, of course</option>
+                    <option value="absolute">Absolutely, Positively, yes</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="heckno">Heck no, I'm not cool</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="dropdown">Pick one of these things from a list</p>
+                <label><input name="pickone" value="33" type="radio" class="input-radio" checked>33</input> </label>
+                <label><input name="pickone" value="pothos" type="radio" class="input-radio">Pothos</input> </label>
+                <label><input name="pickone" value="banana-phone" type="radio" class="input-radio">Banana Phone</input>
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="dropdown">Choose a couple of these things</p>
+                <div id="checks">
+
+                    <label class="check-cont">Front-end Projects
+                        <input type="checkbox" checked="checked" name="prefer" value="front-end-projects"
+                            type="checkbox" class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+
+                    <label class="check-cont">Front-end Projects<input name="prefer" value="front-end-projects"
+                            type="checkbox" class="input-checkbox" /></label>
+                    <label>
+                        <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end
+                        Projects</label>
+                    <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data
+                        Visualization</label>
+                    <label><input name="prefer" value="challenges" type="checkbox"
+                            class="input-checkbox" />Challenges</label>
+                    <label><input name="prefer" value="open-source-community" type="checkbox"
+                            class="input-checkbox" />Open Source Community</label>
+                    <label><input name="prefer" value="gitter-help-rooms" type="checkbox"
+                            class="input-checkbox" />Gitter help rooms</label>
+                    <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Videos</label>
+                    <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />City
+                        Meetups</label>
+                    <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
+                    <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Forum</label>
+                    <label><input name="prefer" value="additional-courses" type="checkbox"
+                            class="input-checkbox" />Additional Courses</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                        Submit
+                    </button>
+                </div>
+        </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  </body>
+</body>
+
 </html>
