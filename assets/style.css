@@ -61,36 +61,59 @@ label {
 }
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   height: 25px;
   width: 25px;
   background-color: #eee;
 }
-.check-cont:hover input ~ .checkmark {
+.rad {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #eee;
+}
+.check-cont:hover input ~ .checkmark,
+.check-cont:hover input ~ .rad {
   background-color: #ccc;
 }
-.check-cont input:checked ~ .checkmark {
+.check-cont input:checked ~ .checkmark,
+.check-cont input:checked ~ .rad {
   background-color: #2196f3;
 }
-.checkmark:after {
+.checkmark:after,
+.rad:after {
   content: "";
   position: absolute;
   display: none;
 }
-.check-cont input:checked ~ .checkmark:after {
+.check-cont input:checked ~ .checkmark:after,
+.check-cont input:checked ~ .rad:after {
   display: block;
 }
 .check-cont .checkmark:after {
   left: 9px;
   top: 5px;
-  width: 5px;
-  height: 10px;
+  width: 8px;
+  height: 13px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  margin: 0 auto;
+}
+.check-cont .rad:after {
+  left: 6px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border: solid white;
+  border-radius: 100%;
+  border-width: 4px;
   margin: 0 auto;
 }
 
@@ -156,6 +179,17 @@ p.dropdown {
   border: none;
   background-color: rgb(0, 236, 138);
 }
-/* input:invalid {
-  border: 1px solid red;
-} */
+p#comments {
+  margin: 0;
+}
+p#ignore {
+  font-size: 12px;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  resize: none;
+  padding: 10px;
+}

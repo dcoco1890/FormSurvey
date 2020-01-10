@@ -44,48 +44,58 @@
             </div>
             <div class="form-group">
                 <p class="dropdown">Pick one of these things from a list</p>
-                <label><input name="pickone" value="33" type="radio" class="input-radio" checked>33</input> </label>
-                <label><input name="pickone" value="pothos" type="radio" class="input-radio">Pothos</input> </label>
-                <label><input name="pickone" value="banana-phone" type="radio" class="input-radio">Banana Phone</input>
-                </label>
+                <label class="check-cont"><input name="pickone" value="33" type="radio" class="input-radio"
+                        checked>33<span class="rad"></span></label>
+                <label class="check-cont"><input name="pickone" value="pothos" type="radio" class="input-radio">Pothos
+                    <span class="rad"></span></label>
+                <label class="check-cont"><input name="pickone" value="banana-phone" type="radio"
+                        class="input-radio">Banana Phone<span class="rad"></span>
             </div>
             <div class="form-group">
                 <p class="dropdown">Choose a couple of these things</p>
                 <div id="checks">
 
-                    <label class="check-cont">Front-end Projects
-                        <input type="checkbox" checked="checked" name="prefer" value="front-end-projects"
-                            type="checkbox" class="input-checkbox">
+                    <label class="check-cont">Eskimo Sailors
+                        <input type="checkbox" checked="checked" name="prefer" value="eskimo-sailor" type="checkbox"
+                            class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check-cont">False Accusations
+                        <input type="checkbox" name="prefer" value="false-accus" type="checkbox" class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check-cont">The Number 7
+                        <input type="checkbox" name="prefer" value="the-num-7" type="checkbox" class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check-cont">Nothing
+                        <input type="checkbox" name="prefer" value="nothing" type="checkbox" class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check-cont">Teriyaki Squid
+                        <input type="checkbox" name="prefer" value="teri-squid" type="checkbox" class="input-checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check-cont">Comic Sans The Movie
+                        <input type="checkbox" name="prefer" value="the-worst-choice" type="checkbox"
+                            class="input-checkbox">
                         <span class="checkmark"></span>
                     </label>
 
 
-                    <label class="check-cont">Front-end Projects<input name="prefer" value="front-end-projects"
-                            type="checkbox" class="input-checkbox" /></label>
-                    <label>
-                        <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end
-                        Projects</label>
-                    <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data
-                        Visualization</label>
-                    <label><input name="prefer" value="challenges" type="checkbox"
-                            class="input-checkbox" />Challenges</label>
-                    <label><input name="prefer" value="open-source-community" type="checkbox"
-                            class="input-checkbox" />Open Source Community</label>
-                    <label><input name="prefer" value="gitter-help-rooms" type="checkbox"
-                            class="input-checkbox" />Gitter help rooms</label>
-                    <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Videos</label>
-                    <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />City
-                        Meetups</label>
-                    <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
-                    <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Forum</label>
-                    <label><input name="prefer" value="additional-courses" type="checkbox"
-                            class="input-checkbox" />Additional Courses</label>
                 </div>
-                <div class="form-group">
-                    <button type="submit" id="submit" class="submit-button">
-                        Submit
-                    </button>
-                </div>
+            </div>
+            <div class="form-group">
+                <p id="comments">Any comments or suggestions?</p>
+                <p id="ignore">All comments will be ignored</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..." ></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
         </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
